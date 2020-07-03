@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="17dp"
+    tools:context=".MainActivity">
+<!--안드로이드 그리드뷰 균등분할(균등사이즈분할)-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:rowCount="10">
+<!--        기본 width : wrap_content-->
+        <Button android:text="★1"/>        <Button android:text="★2"/>
+        <Button android:text="★3"/>        <Button android:text="★4"/>
+        <Button android:text="★5"/>        <Button android:text="★6"/>
+<!--        column(칸:셀)위치 지정 가능-->
+        <Button android:text="★7" android:layout_column="1"/>
+<!--        column/raw  순서 바꿀수 있음-->
+        <Button android:text="★8" android:layout_column="0"/>
+        <Button android:text="★9" android:layout_row="3"
+            android:layout_column="2"/>
+<!--        뷰 레이아웃이 겹쳐질 수 있음-->
+        <Button android:text="★10" android:layout_row="3"
+            android:layout_column="2"/>
+<!--        셀병합(ColumnSpan) 가능:공간차지, 뷰의 크기변경 X-->
+        <Button android:text="★11" android:layout_columnSpan="2"/>
+        <Button/>
+<!--    뷰의 사이즈도 늘리고 싶다면 layout_gravity 속성으로 지정-->
+        <Button android:text="★12" android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"/>        <Button/>
+<!--    줄병합(rowSpan) 가능-->
+        <Button android:text="^0^" android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical"/>
+        <Button/>        <Button/>        <Button/>
+    </GridLayout>
+</RelativeLayout>
+
